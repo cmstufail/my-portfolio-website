@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Ignore Resume component
+src/pages/Resume.jsx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
