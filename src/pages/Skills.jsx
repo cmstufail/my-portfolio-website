@@ -17,7 +17,7 @@ const skills = [
 ];
 
 const Skills = () => {
-  //   const { isDark } = useTheme();
+
   const { theme } = useTheme();
 
   const { ref, inView } = useInView( {
@@ -47,7 +47,17 @@ const Skills = () => {
           : "bg-base-100 text-gray-900"
         }` }
     >
-      <h2 className="text-3xl font-bold text-center mb-12">My Skills</h2>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold inline-block relative pb-2 dark:text-white">
+          My Skills
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
+        </h2>
+        {/* <p className="text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+                    I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                    Drop me a line or visit my office in Sylhet.
+                    Typically respond within 24 hours during work days.
+                </p> */}
+      </div>
 
       <div className="flex flex-wrap justify-center gap-6">
         { skills.map( ( skill, index ) => (

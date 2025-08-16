@@ -1,5 +1,6 @@
 // components
 import { useTheme } from "../context/ThemeProvider";
+import useTitle from "./shared/hooks/UseTite";
 
 const experienceData = [
   {
@@ -17,21 +18,29 @@ const experienceData = [
 ];
 
 const Experience = () => {
-  const { isDark } = useTheme();
+
+  useTitle('Experience || My Portfolio')
+
+  const { theme } = useTheme();
 
   return (
     <section
       id="experience"
-      className={ `py-16 px-6 md:px-16 transition-colors duration-500 ${ isDark ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
-        }` }
+      className={ `py-16 px-6 md:px-16 transition-colors duration-500 ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }
     >
-      <h2 className="text-3xl font-bold text-center mb-12">Experience</h2>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold inline-block relative pb-2 dark:text-white">
+          Experience
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
+        </h2>
+      </div>
 
-      <div className="flex overflow-x-auto gap-6 px-4 md:px-0">
+      <div className="flex justify-center flex-wrap gap-6 px-4 md:px-0">
         { experienceData.map( ( exp, index ) => (
           <div
             key={ index }
-            className="min-w-[250px] bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 flex-shrink-0 animate-slideInRight"
+
+            className={ `w-full md:w-1/2 lg:w-1/3 shadow-md rounded-lg p-6 flex-shrink-0 animate-slideInRight ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }
           >
             <h3 className="text-xl font-semibold">{ exp.role }</h3>
             <p className="text-sm mt-1 italic">{ exp.company } | { exp.duration }</p>

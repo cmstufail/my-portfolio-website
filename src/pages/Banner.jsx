@@ -1,17 +1,16 @@
 import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
-// import { Link } from "react-router-dom";
-
-// components
-// import Navbar from "../components/Navbar/Navbar";
-// import Footer from "../components/Footer/Footer";
 import { Typewriter } from 'react-simple-typewriter';
 
-export default function Banner() {
+// components
+import { useTheme } from "../context/ThemeProvider";
+
+
+const Banner = () => {
+
+    const { theme } = useTheme();
+
     return (
         <div className="flex flex-col min-h-screen bg-base-200 dark:bg-gray-900">
-            {/* Navbar */ }
-            {/* <Navbar /> */ }
-
             {/* Banner Section */ }
             <section
                 id="home"
@@ -31,7 +30,7 @@ export default function Banner() {
                             delaySpeed={ 1500 }
                         />
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
+                    <p className={ `text-lg md:text-xl ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }>
                         A passionate Frontend Developer crafting modern and user-friendly web experiences.
                     </p>
 
@@ -84,9 +83,8 @@ export default function Banner() {
                     />
                 </div>
             </section>
-
-            {/* Footer */ }
-            {/* <Footer /> */ }
         </div>
     );
 }
+
+export default Banner;
