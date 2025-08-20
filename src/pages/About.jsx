@@ -11,7 +11,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className={ ` px-4 flex justify-center transition-colors duration-500
+            className={ `py-10 px-4 flex justify-center transition-colors duration-500
         ${ theme === "dark"
                     ? "bg-gray-900 text-gray-300"
                     : "bg-base-100 text-gray-900"
@@ -21,8 +21,8 @@ const About = () => {
                 ? "bg-gray-900 text-gray-300"
                 : "bg-base-100 text-gray-900"
                 }` }>
-                <div className="mb-12">
-                    <h2 className="text-3xl font-bold inline-block relative pb-2 dark:text-white">
+                <div className="mb-8">
+                    <h2 className="text-3xl font-roboto-slab font-bold inline-block relative pb-2 dark:text-white">
                         About Me
                         <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
                     </h2>

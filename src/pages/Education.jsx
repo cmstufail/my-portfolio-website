@@ -29,7 +29,7 @@ const Education = () => {
       className={ `py-16 px-6 md:px-16 transition-colors duration-500 ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }
     >
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold inline-block relative pb-2 dark:text-white">
+        <h2 className="text-3xl font-roboto-slab font-bold inline-block relative pb-2 dark:text-white">
           Education
           <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"></span>
         </h2>
@@ -40,12 +40,12 @@ const Education = () => {
                 </p> */}
       </div>
 
-      <div className={ `flex flex-col space-y-6 max-w-3xl mx-auto ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }>
+      <div className={ `flex flex-col space-y-6 max-w-3xl mx-auto ${ theme === "dark" ? "bg-gray-00 text-gray-300" : "bg-base-100 text-gray-900" }` }>
 
         { educationData.map( ( edu, index ) => (
           <div
             key={ index }
-            className={ `shadow-md rounded-lg p-6 animate-slideUp ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }
+            className={ `shadow-md rounded-lg p-6 animate-slideUp ${ theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-base-100 text-gray-900" }` }
           >
             <h3 className="text-xl font-semibold">{ edu.degree }</h3>
             <p className="text-sm mt-1 italic">{ edu.institute } | { edu.year }</p>

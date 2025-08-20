@@ -20,12 +20,12 @@ const Footer = ( { activeSection, scrollToSection } ) => {
         <footer className={ `py-8 mt-16 ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900" }` }>
             <div className="max-w-7xl mx-auto px-4 text-center space-y-6">
                 {/* Quick Links with ScrollLink */ }
-                <ul className="flex flex-wrap justify-center gap-6">
+                <ul className="flex flex-wrap justify-center gap-6 font-poppins">
                     { navLinks.map( ( link ) => (
                         <li key={ link.id } className="flex flex-col items-center">
                             <button
                                 onClick={ () => scrollToSection( link.id ) }
-                                className={ `cursor-pointer transition-colors text-sm ${ activeSection === link.id
+                                className={ `cursor-pointer transition-colors ${ activeSection === link.id
                                     ? "text-blue-600 dark:text-blue-400 font-medium"
                                     : theme === "dark"
                                         ? "text-gray-300 hover:text-blue-400"

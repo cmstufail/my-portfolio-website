@@ -21,7 +21,7 @@ const Navbar = ( { activeSection, scrollToSection } ) => {
     ];
 
     return (
-        <nav className={ `transition-colors duration-300 fixed w-full z-50 shadow-sm py-2 top-0 left-0 right-0 ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900"
+        <nav className={ `transition-colors duration-300 fixed w-full z-50 shadow-sm py-2 top-0 left-0 right-0 font-poppins ${ theme === "dark" ? "bg-gray-900 text-gray-300" : "bg-base-100 text-gray-900"
             }` }>
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-12">
@@ -40,7 +40,7 @@ const Navbar = ( { activeSection, scrollToSection } ) => {
                     {/* Logo */ }
                     <button
                         onClick={ () => scrollToSection( "home" ) }
-                        className={ `text-xl font-bold cursor-pointer transition-opacity ${ theme === "dark"
+                        className={ `text-xl font-bold font-poppins cursor-pointer transition-opacity ${ theme === "dark"
                             ? "text-gray-300 hover:text-blue-400"
                             : "text-gray-900 hover:text-blue-600"
                             }` }
@@ -58,7 +58,7 @@ const Navbar = ( { activeSection, scrollToSection } ) => {
                                             scrollToSection( link.id );
                                             window.history.pushState( {}, '', `#${ link.id }` );
                                         } }
-                                        className={ `relative px-1 py-2 text-sm transition-colors cursor-pointer ${ activeSection === link.id
+                                        className={ `relative px-1 py-2 transition-colors cursor-pointer ${ activeSection === link.id
                                             ? "text-blue-600 dark:text-blue-400 font-medium"
                                             : theme === "dark"
                                                 ? "text-gray-300 hover:text-blue-400"
